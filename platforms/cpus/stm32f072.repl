@@ -51,28 +51,30 @@ cpu: CPU.CortexM @ sysbus
 exti: IRQControllers.EXTI @ sysbus 0x40010400
     [0-6] -> nvic@[6-10, 23, 40]
 
-gpioPortA: GPIOPort.STM32F4GPIOPort @ sysbus <0x48000000, +0x400>
+gpioPortA: GPIOPort.STM32F0GPIOPort @ sysbus <0x48000000, +0x400>
     [0-15] -> exti@[0-15]
 
-gpioPortB: GPIOPort.STM32F4GPIOPort @ sysbus <0x48000400, +0x400>
+gpioPortB: GPIOPort.STM32F0GPIOPort @ sysbus <0x48000400, +0x400>
     [0-15] -> exti@[0-15]
 
-gpioPortC: GPIOPort.STM32F4GPIOPort @ sysbus <0x48000800, +0x400>
+gpioPortC: GPIOPort.STM32F0GPIOPort @ sysbus <0x48000800, +0x400>
     [0-15] -> exti@[0-15]
 
-gpioPortD: GPIOPort.STM32F4GPIOPort @ sysbus <0x48000C00, +0x400>
+gpioPortD: GPIOPort.STM32F0GPIOPort @ sysbus <0x48000C00, +0x400>
     [0-15] -> exti@[0-15]
 
-gpioPortE: GPIOPort.STM32F4GPIOPort @ sysbus <0x48001000, +0x400>
+gpioPortE: GPIOPort.STM32F0GPIOPort @ sysbus <0x48001000, +0x400>
     [0-15] -> exti@[0-15]
 
-gpioPortF: GPIOPort.STM32F4GPIOPort @ sysbus <0x48001400, +0x400>
+gpioPortF: GPIOPort.STM32F0GPIOPort @ sysbus <0x48001400, +0x400>
     [0-15] -> exti@[0-15]
 
-UserLED: Miscellaneous.LED @ gpioPortA
+UserLED1: Miscellaneous.LED @ gpioPortA
+UserLED2: Miscellaneous.LED @ gpioPortA
 
-gpioPortD:
-    5 -> UserLED@0
+gpioPortA:
+    5 -> UserLED1@0
+    6 -> UserLED2@0
 
 
 

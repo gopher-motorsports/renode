@@ -42,7 +42,7 @@ i2c2: I2C.STM32F4_I2C @ sysbus 0x40005800
 exti: IRQControllers.EXTI @ sysbus 0x40010400
     [0-6] -> nvic@[6-10, 23, 40]
 
-gpioPortA: GPIOPort.STM32F1GPIOPort @ sysbus <0x40010800, +0x400>
+gpioPortA: GPIOPort.STM32F0GPIOPort @ sysbus <0x40010800, +0x400>
     [0-15] -> exti@[0-15]
 
 gpioPortB: GPIOPort.STM32F1GPIOPort @ sysbus <0x40010C00, +0x400>
