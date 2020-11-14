@@ -80,4 +80,4 @@ gpioPortA:
 
 sysbus:
     init:
-        ApplySVD @C:\Users\H-O-Cally\Documents\GitHub\renode\platforms\cpus\STM32F0x2.svd
+        ApplySVD @gopher-motorsports\platforms\svds\STM32F0x2.svd

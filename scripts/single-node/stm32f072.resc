@@ -1,4 +1,4 @@
-include @STM32F0GPIOPort.cs
+include @gopher-motorsports/peripherals/STM32F0GPIOPort.cs
 
 mach create
 machine LoadPlatformDescription @platforms/cpus/stm32f072.repl
